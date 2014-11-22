@@ -1,4 +1,4 @@
-kochava-cordova
+nz-range-slider
 ===============
 
-cordova plugin for http://www.kochava.com/
+Cordova plugin for native range slider selection
