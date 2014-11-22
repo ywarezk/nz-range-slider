@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+id="com.rangeslider.sdk" version="0.0.1">
+	<name>RangeSlider</name>
+	<description>Range Slider native plugin</description>
+	<license>MIT License</license>
+	<keywords>Angular Ionic Range Slider</keywords>
+	<author>Nerdeez LTD</author>
+	
+	<engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+	<js-module src="www/nz-range-slider.js" name="RangeSlider">
+        <clobbers target="RangeSlider" />
+    </js-module>
+	
+	<!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="RangeSlider">
+                <param name="ios-package" value="RangeSlider"/>
+                <param name="onload" value="true" />
+          	</feature>
+        </config-file>
+        
+        <header-file src="src/ios/RangeSlider.h" />
+        <source-file src="src/ios/RangeSlider.m" />
+        <source-file src="src/ios/NMRangeSlider.h" />
+        <source-file src="src/ios/NMRangeSlider.m" />
+        
+        <source-file src="src/ios/DefaultTheme/slider-default_trackBackground@2x.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-handle.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-handle@2x.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-handle-highlighted.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-handle-highlighted@2x.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-track.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-track@2x.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-trackBackground.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-trackCrossedOver.png" target-dir="DefaultTheme/" />
+        <source-file src="src/ios/DefaultTheme/slider-default-trackCrossedOver@2x.png" target-dir="DefaultTheme/" />
+        
+        <source-file src="src/ios/DefaultTheme7/slider-default7-trackBackground@2x.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-handle.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-handle@2x.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-track.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-track@2x.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-trackBackground.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-trackCrossedOver.png" target-dir="DefaultTheme7/" />
+        <source-file src="src/ios/DefaultTheme7/slider-default7-trackCrossedOver@2x.png" target-dir="DefaultTheme7/" />
+        
+        <source-file src="src/ios/MetalTheme/slider-metal-trackBackground@2x.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-handle.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-handle@2x.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-handle-highlighted.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-handle-highlighted@2x.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-track.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-track@2x.png" target-dir="MetalTheme/" />
+        <source-file src="src/ios/MetalTheme/slider-metal-trackBackground.png" target-dir="MetalTheme/" />
+        
+    </platform>
+    
+	
+</plugin>
