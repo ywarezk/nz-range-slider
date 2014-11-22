@@ -23,9 +23,9 @@ Developers who wants to expend it to android are more then welcome
 
 
 1. In your terminal type
-```bash
-cordova plugin add https://github.com/ywarezk/nz-range-slider.git
-```
+  ```bash
+  cordova plugin add https://github.com/ywarezk/nz-range-slider.git 
+  ```
 2. In your native installation, inside your plugin group, you will find the native code copied along with the images of the plugin. 
 Create groups for those images based on the group that's in the plugin src folder of iOS. 
 Meanning you should divide the images to 3 groups: DefaultTheme, DefaultTheme7, MetalTheme
