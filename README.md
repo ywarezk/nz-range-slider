@@ -25,7 +25,7 @@ Installation iOS
 <ul>
 <li>
 In your terminal type
-```
+```bash
 cordova plugin add https://github.com/ywarezk/nz-range-slider.git
 ```
 </li>
