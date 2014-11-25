@@ -32,6 +32,8 @@
     int maximumValue = [options integerValueForKey:@"maximumValue" defaultValue:60];
     int minimumValue = [options integerValueForKey:@"minimumValue" defaultValue:14];
     int stepValue = [options integerValueForKey:@"stepValue" defaultValue:4];
+    int upperValue = [options integerValueForKey:@"upperValue" defaultValue:nil];
+    int lowerValue = [options integerValueForKey:@"lowerValue" defaultValue:nil];
     
     //create the slider
     CGRect sliderFrame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height/2, [[UIScreen mainScreen] bounds].size.width, 100);
@@ -42,6 +44,14 @@
     [self.rangeSlider setMinimumRange:(float)4];
     [self.rangeSlider setUpperValue:(float)maximumValue];
     [self.rangeSlider setLowerValue:(float)minimumValue];
+    
+    //set the default values of the slider
+    if (upperValue != nil) {
+        [self.rangeSlider setUpperValue:(float)upperValue];
+    }
+    if (lowerValue != nil) {
+        [self.rangeSlider setLowerValue:(float)lowerValue];
+    }
     
     //attach observers for the values of the slider
     [self.rangeSlider addObserver:self forKeyPath:@"upperValue" options:NSKeyValueObservingOptionOld context:nil];
