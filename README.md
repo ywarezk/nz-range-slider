@@ -3,8 +3,8 @@
 
 
 
-Cordova plugin for native range slider selection.
-This alows us to place a native range slider component in our hybrid app. 
+Cordova plugin for native range slider selection and native slider selection.
+This alows us to place a native range slider component in our hybrid app, or if we want a regular UISlider. 
 The native component is based on NMRangeSlider: https://github.com/muZZkat/NMRangeSlider
 Feel free to contribute to this project and help expend this plugin with more features.
 You can find detailed information about how I created this plugin in this link: http://blog.nerdeez.com/?p=142
@@ -51,6 +51,8 @@ The options are:
 
 3. stepValue - the minimum amount we can increase seach slider
 
+4. isSingleSlider - boolean value that defaults to false, if true then a regular UISlider will be presented. the value of this slider we get from getMax method
+
 
 
 ##Hide the slider
@@ -70,7 +72,7 @@ RangeSlider.hideSlider();
 //get the left handle value
 RangeSlider.getMin(<callback>);
 
-//get the right handle value
+//get the right handle value, of regular UISlider this will be used to get the value
 RangeSlider.getMax(<callback>)
 ```
 

@@ -12,9 +12,11 @@
 
 @interface RangeSlider : CDVPlugin{
     NMRangeSlider* rangeSlider;
+    UISlider* singleSlider;
 }
 
 @property(nonatomic, retain) NMRangeSlider* rangeSlider;
+@property(nonatomic, retain) UISlider* singleSlider;
 
 - (void)showSlider:(CDVInvokedUrlCommand *)command;
 - (void)hideSlider:(CDVInvokedUrlCommand *)command;
