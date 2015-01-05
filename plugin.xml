@@ -58,6 +58,9 @@ id="com.rangeslider.sdk" version="0.0.1">
         <source-file src="src/ios/MetalTheme/slider-metal-track@2x.png" target-dir="MetalTheme/" />
         <source-file src="src/ios/MetalTheme/slider-metal-trackBackground.png" target-dir="MetalTheme/" />
         
+        <framework src="UIKit.framework" weak="true" />
+        <framework src="Foundation.framework" weak="true" />
+        
     </platform>
     
 	
