@@ -17,6 +17,9 @@ id="com.rangeslider.sdk" version="0.0.1">
 	
 	<!-- ios -->
     <platform name="ios">
+    	
+    	<hook type="before_plugin_install" src="hooks/ios_before_install.sh" />
+    	
         <config-file target="config.xml" parent="/*">
             <feature name="RangeSlider">
                 <param name="ios-package" value="RangeSlider"/>
@@ -28,7 +31,7 @@ id="com.rangeslider.sdk" version="0.0.1">
         <source-file src="src/ios/RangeSlider.m" />
         <source-file src="src/ios/NMRangeSlider.h" />
         <source-file src="src/ios/NMRangeSlider.m" />
-        
+       <!--
         <source-file src="src/ios/DefaultTheme/slider-default_trackBackground@2x.png" target-dir="DefaultTheme/" />
         <source-file src="src/ios/DefaultTheme/slider-default-handle.png" target-dir="DefaultTheme/" />
         <source-file src="src/ios/DefaultTheme/slider-default-handle@2x.png" target-dir="DefaultTheme/" />
@@ -57,11 +60,34 @@ id="com.rangeslider.sdk" version="0.0.1">
         <source-file src="src/ios/MetalTheme/slider-metal-track.png" target-dir="MetalTheme/" />
         <source-file src="src/ios/MetalTheme/slider-metal-track@2x.png" target-dir="MetalTheme/" />
         <source-file src="src/ios/MetalTheme/slider-metal-trackBackground.png" target-dir="MetalTheme/" />
-        
+       -->
         <framework src="UIKit.framework" weak="true" />
         <framework src="Foundation.framework" weak="true" />
         
     </platform>
     
+	<!-- android -->
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RangeSlider">
+                <param name="android-package" value="com.nerdeez.LearnIonic.RangeSlider"/>
+          	</feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+        </config-file>
+        
+        <source-file src="src/android/RangeSlider.java" target-dir="src/com/nerdeez/LearnIonic" />
+        <source-file src="src/android/RangeSeekBar.java" target-dir="src/com/nerdeez/LearnIonic" />
+       <!-- 
+        <resource-file src="src/android/res/drawable-hdpi/seek_thumb_normal.png" target-dir="res/drawable-hdpi/seek_thumb_normal.png" />
+        <resource-file src="src/android/res/drawable-hdpi/seek_thumb_pressed.png" target-dir="res/drawable-hdpi/seek_thumb_pressed.png" />
+        <resource-file src="src/android/res/drawable-mdpi/seek_thumb_normal.png" target-dir="res/drawable-hdpi/seek_thumb_normal.png" />
+        <resource-file src="src/android/res/drawable-mdpi/seek_thumb_pressed.png" target-dir="res/drawable-hdpi/seek_thumb_pressed.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/seek_thumb_normal.png" target-dir="res/drawable-hdpi/seek_thumb_normal.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/seek_thumb_pressed.png" target-dir="res/drawable-hdpi/seek_thumb_pressed.png" />
+       -->
+    </platform>
 	
 </plugin>

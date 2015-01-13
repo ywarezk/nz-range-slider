@@ -31,6 +31,8 @@ Create groups for those images based on the group that's in the plugin src folde
 Meanning you should divide the images to 3 groups: DefaultTheme, DefaultTheme7, MetalTheme
 Would be nice if they were auto created in the plugin installation but i didn't manage to understand how to create the from the plugin.xml.
 Help would be appreciated
+3. Also if you have a problem seeing the range slider, then in the plugin group copy the folders: DefaultTheme, DefaultTheme7, MetalTheme to the plugins folder in your xcode project.
+
 
 
 ##Show the slider
