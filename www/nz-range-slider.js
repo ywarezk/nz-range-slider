@@ -6,6 +6,11 @@
  * @version: 1.0
  * @copyright: Nerdz LTD
  * @website: http://www.nerdeez.com
+ * 
+ * Updated January 25th, 2015
+ * @author: Eli Kushelev
+ * @version: 1.0
+ * @copyright: Nerdz LTD
  */
 
 var RangeSlider= {
@@ -40,18 +45,33 @@ var RangeSlider= {
      ***************************/
     
     /**
-     * show the slider with these configurations
+     * show the range slider with these configurations
      * @param {Object} options example: {minimumValue: 14, maximumValue: 60, stepValue:4}
      */
-    showSlider: function (options) {
-        this._callCordova('showSlider', options, null, null);
+    showRangeSlider: function (options) {
+        this._callCordova('showRangeSlider', options, null, null);
     },
     
     /**
-     * hide the slider from view
+     * show the single slider with these configurations
+     * @param {Object} options example: {minimumValue: 14, maximumValue: 60}
      */
-    hideSlider: function () {
-        this._callCordova('hideSlider', null, null, null);
+    showSingleSlider: function (options) {
+        this._callCordova('showSingleSlider', options, null, null);
+    },
+    
+    /**
+     * hide the range slider from view
+     */
+    hideRangeSlider: function () {
+        this._callCordova('hideRangeSlider', null, null, null);
+    },
+    
+     /**
+     * hide the single slider from view
+     */
+    hideSingleSlider: function () {
+        this._callCordova('hideSingleSlider', null, null, null);
     },
     
     /**
@@ -70,6 +90,13 @@ var RangeSlider= {
         this._callCordova('getMax', null, callback, null);
     },
     
+    /**
+     * get the single slider value 
+     * @param {Object} callback
+     */
+    getValue: function (callback) {
+        this._callCordova('getValue', null, callback, null);
+    },
     /***************************
      * end public functions
      ***************************/

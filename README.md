@@ -39,7 +39,11 @@ Help would be appreciated
 
 
 ```
-RangeSlider.showSlider(<Options>);
+RangeSlider.showRangeSlider(<Options>); // RangeSlider
+
+or
+
+RangeSlider.showSingleSlider(<Options>); // regular UISlider
 ```
 Options is a disctionary.
 For now the options are pretty minimalist and if someone would want to expend them they are more then welcomed. 
@@ -51,9 +55,7 @@ The options are:
 2. maximumValue - maximum value of the slider
 
 
-3. stepValue - the minimum amount we can increase seach slider
-
-4. isSingleSlider - boolean value that defaults to false, if true then a regular UISlider will be presented. the value of this slider we get from getMax method
+3. stepValue - the minimum amount we can increase the range slider each step
 
 
 
@@ -62,7 +64,11 @@ The options are:
 
 Will make the slider disappear 
 ```
-RangeSlider.hideSlider();
+RRangeSlider.hideRangeSlider(); // RangeSlider
+
+or
+
+RangeSlider.hideSingleSlider(); // regular UISlider
 ```
 
 
@@ -71,14 +77,17 @@ RangeSlider.hideSlider();
 
 
 ```
-//get the left handle value
+//get the left handle value of range slider
 RangeSlider.getMin(<callback>);
 
-//get the right handle value, of regular UISlider this will be used to get the value
+//get the right handle value of range slider
 RangeSlider.getMax(<callback>)
+
+//get handle value of the UISlider
+RangeSlider.getValue(<callback>)
 ```
 
-Since these functions returns the value asynchronosly, we need to add a vallback function inside them. 
+Since these functions returns the value asynchronosly, we need to add a callback function inside them. 
 The callback function is with the following signature: 
 ```
 function valueCallback(valueFromSlider){
@@ -93,7 +102,11 @@ function valueCallback(valueFromSlider){
 
 You can also subscribe for an event of range slider values changed by doing the following: 
 ```
-document.addEventListener('rangeChanged', <callback>, false);
+document.addEventListener('rangeChanged', <callback>, false); // for range slider
+
+or
+
+document.addEventListener('singleRangeChanged', <callback>, false); // for single UISlider
 ```
 The callback function will be called whenever the range is changed
 
