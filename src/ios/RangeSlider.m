@@ -36,8 +36,14 @@
     int lowerValue = [options integerValueForKey:@"lowerValue" defaultValue:nil];
     BOOL isUISlider = (BOOL)[options integerValueForKey:@"isSingleSlider" defaultValue:0];
     
+    // new params for location of placing the slider
+    int leftPos = [options integerValueForKey:@"left" defaultValue:5];
+    int topPos = [options integerValueForKey:@"top" defaultValue:[[UIScreen mainScreen] bounds].size.height/2];
+    int sliderWidth = [options integerValueForKey:@"width" defaultValue:[[UIScreen mainScreen] bounds].size.width-10];
+    int sliderHeight = [options integerValueForKey:@"height" defaultValue:100];
+    
     //create the slider
-    CGRect sliderFrame = CGRectMake(5, [[UIScreen mainScreen] bounds].size.height/2, [[UIScreen mainScreen] bounds].size.width-10, 100);
+    CGRect sliderFrame = CGRectMake(leftPos, topPos, sliderWidth, sliderHeight);
     if (isUISlider) {
         self.singleSlider = [[UISlider alloc] initWithFrame:sliderFrame];
         [self.singleSlider setValue:(float)maximumValue];
