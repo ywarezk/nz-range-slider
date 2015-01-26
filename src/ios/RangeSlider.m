@@ -52,6 +52,17 @@
     [self.rangeSlider setUpperValue:(float)maximumValue];
     [self.rangeSlider setLowerValue:(float)minimumValue];
     
+    //change the color of slider track
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    UIColor *color = [UIColor colorWithRed:229.0f/255.0f green:46.0f/255.0f blue:91.0f/255.0f alpha:1.0];
+    [color setFill];
+    UIRectFill(rect); // Fill it with your color
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [self.rangeSlider setTrackImage:image];
+    
     //set the default values of the slider
     if (upperValue != nil) {
         [self.rangeSlider setUpperValue:(float)upperValue];
@@ -93,6 +104,10 @@
     [self.singleSlider setValue:(float)minimumValue];
     [self.singleSlider setMinimumValue:minimumValue];
     [self.singleSlider setMaximumValue:maximumValue];
+    
+    //change the color of slider track
+    UIColor *color = [UIColor colorWithRed:229.0f/255.0f green:46.0f/255.0f blue:91.0f/255.0f alpha:1.0];
+    [self.singleSlider setMinimumTrackTintColor:color];
     
     [self.singleSlider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     
