@@ -111,6 +111,9 @@
  * hides the RangeSlider from view
  */
 - (void)hideRangeSlider:(CDVInvokedUrlCommand *)command{
+    [self.rangeSlider removeObserver:self forKeyPath:@"upperValue" context:nil];
+    [self.rangeSlider removeObserver:self forKeyPath:@"lowerValue" context:nil];
+    
     [self.rangeSlider removeFromSuperview];
 }
 
@@ -118,6 +121,8 @@
  * hides the SingleSlider from view
  */
 - (void)hideSingleSlider:(CDVInvokedUrlCommand *)command{
+    [self.singleSlider removeTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    
     [self.singleSlider removeFromSuperview];
 }
 
