@@ -49,14 +49,32 @@ Options is a disctionary.
 For now the options are pretty minimalist and if someone would want to expend them they are more then welcomed. 
 The options are:
 
-1. minimumValue - minimum value of the slider
+1. minimumValue - minimum value of the slider (default: 14)
 
 
-2. maximumValue - maximum value of the slider
+2. maximumValue - maximum value of the slider (default: 60)
 
 
-3. stepValue - the minimum amount we can increase the range slider each step
+3. lowerValue - the lowest value the slider can have (default: minimumValue)
 
+
+4. upperValue - the highest value the slider can have (default: maximumValue)
+
+
+position of slider on screen:
+
+5. left - (default: 5)
+
+6. top - (default: middle of screen)
+
+7. width - (default: screen width - 10)
+
+
+next option are only for the RangeSlider (not avilable for UISlider)
+
+8. stepValue - the minimum amount we can increase the range slider each step (default: 1)
+
+8. showCaptions - show the current values on the handles (default: false)
 
 
 ##Hide the slider
