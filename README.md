@@ -6,20 +6,17 @@
 Cordova plugin for native range slider selection and native slider selection.
 This alows us to place a native range slider component in our hybrid app, or if we want a regular UISlider. 
 The native component is based on NMRangeSlider: https://github.com/muZZkat/NMRangeSlider
-Feel free to contribute to this project and help expend this plugin with more features.
+Feel free to contribute to this project and help expand this plugin with more features.
 You can find detailed information about how I created this plugin in this link: http://blog.nerdeez.com/?p=142
 
 
 
 ##Supported platforms
 
-
-For now only iOS is supported.
-Developers who wants to expend it to android are more then welcome
+iOS, Android
 
 
-
-##Installation iOS
+##Installation
 
 
 1. In your terminal type
@@ -45,8 +42,8 @@ or
 
 RangeSlider.showSingleSlider(<Options>); // regular UISlider
 ```
-Options is a disctionary.
-For now the options are pretty minimalist and if someone would want to expend them they are more then welcomed. 
+Options is a dictionary.
+For now the options are pretty minimalist and if someone would want to expand them they are more then welcome. 
 The options are:
 
 1. minimumValue - minimum value of the slider (default: 14)
@@ -70,9 +67,9 @@ position of slider on screen:
 7. width - (default: screen width - 10)
 
 
-next option are only for the RangeSlider (not avilable for UISlider)
+the following options apply only to the RangeSlider (not avilable for UISlider)
 
-8. stepValue - the minimum amount we can increase the range slider each step (default: 1)
+8. stepValue - the amount the slider value increases for each step (default: 1)
 
 8. showCaptions - show the current values on the handles (default: false)
 
@@ -106,7 +103,7 @@ RangeSlider.getValue(<callback>)
 ```
 
 Since these functions returns the value asynchronosly, we need to add a callback function inside them. 
-The callback function is with the following signature: 
+The callback function receives a single parameter that contains the slider value: 
 ```
 function valueCallback(valueFromSlider){
 	alert('We got the following value from the slider: ' + valueFromSlider);
@@ -118,7 +115,7 @@ function valueCallback(valueFromSlider){
 ##Event value changed
 
 
-You can also subscribe for an event of range slider values changed by doing the following: 
+You can also subscribe to a change event by doing the following: 
 ```
 document.addEventListener('rangeChanged', <callback>, false); // for range slider
 
@@ -126,7 +123,7 @@ or
 
 document.addEventListener('singleRangeChanged', <callback>, false); // for single UISlider
 ```
-The callback function will be called whenever the range is changed
+The callback function will be called whenever the range changes
 
 
 
