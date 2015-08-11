@@ -32,8 +32,8 @@ Would be nice if they were auto created in the plugin installation, but I didn't
 Help would be appreciated.
 3. Also, if you have a problem seeing the range slider, then in the plugin, group copy the folders: DefaultTheme, DefaultTheme7, MetalTheme to the plugins folder in your Xcode project.
 
-API
-===
+#API
+
 
 ##Show the slider
 
