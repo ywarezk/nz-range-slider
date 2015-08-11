@@ -4,10 +4,10 @@
 
 
 Cordova plugin for native range slider selection and native slider selection.
-This alows us to place a native range slider component in our hybrid app, or if we want a regular UISlider. 
-The native component is based on NMRangeSlider: https://github.com/muZZkat/NMRangeSlider
+This allows us to place a native range slider component in our hybrid app, or alternatively, a regular UISlider. 
+The native component is based on NMRangeSlider: https://github.com/muZZkat/NMRangeSlider.
 Feel free to contribute to this project and help expand this plugin with more features.
-You can find detailed information about how I created this plugin in this link: http://blog.nerdeez.com/?p=142
+You can find detailed information about how I created this plugin here: http://blog.nerdeez.com/?p=142
 
 
 
@@ -23,14 +23,17 @@ iOS, Android
   ```bash
   cordova plugin add https://github.com/ywarezk/nz-range-slider.git 
   ```
+  For a Meteor Cordova app, type
+  ```meteor add cordova:com.rangeslider.sdk@https://github.com/ywarezk/nz-range-slider/tarball/<SHA of last commit>```
 2. In your native installation, inside your plugin group, you will find the native code copied along with the images of the plugin. 
 Create groups for those images based on the group that's in the plugin src folder of iOS. 
-Meanning you should divide the images to 3 groups: DefaultTheme, DefaultTheme7, MetalTheme
-Would be nice if they were auto created in the plugin installation but i didn't manage to understand how to create the from the plugin.xml.
-Help would be appreciated
-3. Also if you have a problem seeing the range slider, then in the plugin group copy the folders: DefaultTheme, DefaultTheme7, MetalTheme to the plugins folder in your xcode project.
+Meanning you should divide the images to 3 groups: DefaultTheme, DefaultTheme7, MetalTheme.
+Would be nice if they were auto created in the plugin installation, but I didn't quite understand how to create them from the plugin.xml.
+Help would be appreciated.
+3. Also, if you have a problem seeing the range slider, then in the plugin, group copy the folders: DefaultTheme, DefaultTheme7, MetalTheme to the plugins folder in your Xcode project.
 
-
+API
+===
 
 ##Show the slider
 
